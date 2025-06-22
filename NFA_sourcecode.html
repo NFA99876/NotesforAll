@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NotesforAll</title>
+    <style>
+        body {
+            background-color: skyblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Top Navigation Bar */
+        .navbar {
+            background-color: #003366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        /* Logo Image */
+        .logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        /* Menu icon (three strips) */
+        .menu-icon {
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 2;
+        }
+
+        /* Floating menu content */
+        .menu-content {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+            padding: 15px;
+            width: 220px;
+            z-index: 1;
+            animation: slideDown 0.3s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-align: left;
+        }
+
+        .menu-links a {
+            text-decoration: none;
+            color: #003366;
+            font-weight: bold;
+            position: relative;
+            padding-right: 20px;
+            transition: color 0.3s;
+        }
+
+        .menu-links a:hover {
+            color: #0077cc;
+        }
+
+        .menu-links a::after {
+            content: "➔";
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        /* Main Heading */
+        h1 {
+            padding: 30px 0;
+            font-size: 2.5em;
+            color: #ffffff;
+            text-align: center;
+            text-shadow: 1px 1px 3px #444;
+        }
+
+        /* Class card layout */
+        .class-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .class-card {
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .class-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            background-color: #f0f8ff;
+        }
+    </style>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menuDropdown');
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="logo">
+            <img src="C:\Users\smart\Downloads\NFA_LOGO.png" alt="Logo">
+        </div>
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div class="menu-content" id="menuDropdown">
+        <div class="menu-links">
+            <a href="">About Us</a>
+            <a href="">Options</a>
+            <a href="">Study Plan</a>
+            <a href="E:\side options\contactus.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <h1>Get all your notes in one place</h1>
+
+    <div class="class-row">
+        <a href="E:\class6_sub.html" class="class-card">Class 6th</a>
+        <a href="E:\NotesforAll site essentials\class7subNFU.html" class="class-card">Class 7th</a>
+        <a href="E:\class8_sub.html" class="class-card">Class 8th</a>
+        <a href="E:\class9_sub.html" class="class-card">Class 9th</a>
+        <a href="E:\class10_sub.html" class="class-card">Class 10th</a>
+        <a href="E:\NotesforAll site essentials\seniorsec_stream.html" class="class-card">Senior Secondary (11th & 12th)</a>
+    </div>
+     
+     <!-- Footer Bar -->
+    <div style="
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 30px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 0.95em;
+        ">
+     <div>Feel free to contact us</div>
+     <div>✉️ notesforallbusiness@gmail.com</div>
+    </div>
+
+</body>
+</html>
